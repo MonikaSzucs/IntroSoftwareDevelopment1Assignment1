@@ -64,7 +64,7 @@ public class House
      * 
      * @param year sets the value for the year
      */
-    public final void setYear(int theYear)
+    public void setYear(int theYear)
     {
         if((theYear>=MIN_YEAR)&&(theYear<=MAX_YEAR)){
             year = theYear;
@@ -93,13 +93,13 @@ public class House
      * 
      * @param size get the size of the house in square feet.
      */
-    public final void setSize(double theSize)
+    public void setSize(double theSize)
     {
         if(theSize>=MIN_SQUARE_FEET){
             size = theSize;
         }
         else {
-            throw new IllegalArgumentException("Sorry, " + theSize + " square feet is too small for a mansion");
+            throw new IllegalArgumentException("Sorry, " + theSize + " square feet is too small for a mansion.");
         }
     }
 
@@ -118,20 +118,20 @@ public class House
      * 
      * @param theNeightborhood checks if the value is not nall.
      */
-    public final void setNeighborhood(String theNeighborhood)
+    public void setNeighborhood(String theNeighborhood)
     {
         if(theNeighborhood != null){
             neighborhood = theNeighborhood;
         }
         else {
-            throw new IllegalArgumentException("The " + theNeighborhood + " is not valid");
+            throw new IllegalArgumentException("The Neighborhood is not valid.");
         }
 
         if(theNeighborhood.length()>0){
             neighborhood = theNeighborhood;
         }
         else {
-            throw new IllegalArgumentException("Sorry the neightborhood must be set");
+            throw new IllegalArgumentException("Sorry, the Neighborhood must be set.");
         }
     }
 
@@ -150,7 +150,7 @@ public class House
      * 
      * @param theNumBedrooms checks to see if it is greater than or equal to three.
      */
-    public final void setNumBedrooms(int theNumBedrooms)
+    public void setNumBedrooms(int theNumBedrooms)
     {
         if(theNumBedrooms>=MIN_BEDROOMS){
             numBedrooms = theNumBedrooms;
@@ -175,13 +175,13 @@ public class House
      * 
      * @param theNumBathrooms checks to see if there is more than or equal to 2.5 bathrooms.
      */
-    public final void setNumBathrooms(double theNumBathrooms)
+    public void setNumBathrooms(double theNumBathrooms)
     {
-        if(theNumBathrooms>=MIN_BATHROOMS){
+        if(theNumBathrooms >= MIN_BATHROOMS){
             numBathrooms = theNumBathrooms;
         }
         else {
-            throw new IllegalArgumentException("Sorry, a mansion should hae at least 2.5 bathrooms.");
+            throw new IllegalArgumentException("Sorry, a mansion should have at least 2.5 bathrooms.");
         }
     }
     
@@ -200,7 +200,7 @@ public class House
      * 
      * @param theView is checking if here is a view or not.
      */
-    public final void setView(boolean theView){
+    public void setView(boolean theView){
         if(theView){
             view = theView;
         }
@@ -222,10 +222,10 @@ public class House
      * 
      * @param pictureGallery checks to see if there is a link to a picture gallary for the house.
      */
-    public final void setPictureGallery(String thePictureGallery)
+    public void setPictureGallery(String thePictureGallery)
     {
         if(thePictureGallery == ""){
-            throw new IllegalArgumentException("Sorry, the Picture Gallery must be set");
+            throw new IllegalArgumentException("Sorry, the Picture Gallery must be set.");
         }
         else {
             pictureGallery = thePictureGallery;
@@ -235,17 +235,17 @@ public class House
             pictureGallery = thePictureGallery;
         }
         else {
-            throw new IllegalArgumentException("Sorry, the Picture Gallery is not valid.");
+            throw new IllegalArgumentException("The Picture Gallery is not valid.");
         }
     }
     
     
     public String getHouseDetails(){
         if(view){
-            return("This mansion was built in " + getYear() + " with " + getSize() + " square feet of space, " + getNumBedrooms() + " bedrooms and " + getNumBathrooms() + " bathrooms. it has a spectacular view. You can see pictures of this house at " + getPictureGallery());
+            return("This mansion was built in " + getYear() + " with " + getSize() + " square feet of space, " + getNumBedrooms() + " bedrooms and " + getNumBathrooms() + " bathrooms. It has a spectacular view. You can see pictures of this house at " + getPictureGallery() + ".");
         }
         else {
-            return("This mansion was built in " + getYear() + " with " + getSize() + " square feet of space, " + getNumBedrooms() + " bedrooms and " + getNumBathrooms() + " bathrooms. It is situated in a fantastic location. You can see pictures of this house at " + getPictureGallery());
+            return("This mansion was built in " + getYear() + " with " + getSize() + " square feet of space, " + getNumBedrooms() + " bedrooms and " + getNumBathrooms() + " bathrooms. It is situated in a fantastic location. You can see pictures of this house at " + getPictureGallery() + ".");
         }
     }
 }

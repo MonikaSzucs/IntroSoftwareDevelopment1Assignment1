@@ -7,7 +7,7 @@
  */
 public class House
 {
-    private static  final   int     MIN_YEAR = 1920;
+    private static  final   int     MIN_YEAR = 1850;
     private static  final   int     MAX_YEAR = 2018;
     private static  final   double  MIN_SQUARE_FEET = 2500.0;
     private static  final   int     MIN_BEDROOMS = 3;
@@ -70,7 +70,7 @@ public class House
             year = theYear;
         }
 
-        else if (theYear>MAX_YEAR){
+        else if (theYear>=MAX_YEAR){
             throw new IllegalArgumentException("Sorry, the year " + theYear + " is invalid.");
         }
         else{
@@ -224,11 +224,11 @@ public class House
      */
     public final void setPictureGallery(String thePictureGallery)
     {
-        if(thePictureGallery.length()>0){
-            pictureGallery = thePictureGallery;
+        if(thePictureGallery == ""){
+            throw new IllegalArgumentException("Sorry, the Picture Gallery must be set");
         }
         else {
-            throw new IllegalArgumentException("Sorry, the Picture Gallery must be set");
+            pictureGallery = thePictureGallery;
         }
 
         if(thePictureGallery != null){
@@ -240,12 +240,12 @@ public class House
     }
     
     
-    public void getHouseDetails(){
+    public String getHouseDetails(){
         if(view){
-            System.out.println("This mansion was built in " + getYear() + " with " + getSize() + " square feet of space, " + getNumBedrooms() + " bedrooms and " + getNumBathrooms() + " bathrooms. it has a spectacular view. You can see pictures of this house at " + getPictureGallery());
+            return("This mansion was built in " + getYear() + " with " + getSize() + " square feet of space, " + getNumBedrooms() + " bedrooms and " + getNumBathrooms() + " bathrooms. it has a spectacular view. You can see pictures of this house at " + getPictureGallery());
         }
         else {
-            System.out.println("This mansion was built in " + getYear() + " with " + getSize() + " square feet of space, " + getNumBedrooms() + " bedrooms and " + getNumBathrooms() + " bathrooms. It is situated in a fantastic location. You can see pictures of this house at " + getPictureGallery());
+            return("This mansion was built in " + getYear() + " with " + getSize() + " square feet of space, " + getNumBedrooms() + " bedrooms and " + getNumBathrooms() + " bathrooms. It is situated in a fantastic location. You can see pictures of this house at " + getPictureGallery());
         }
     }
 }

@@ -12,10 +12,10 @@ public class House
     private static  final   double  MIN_SQUARE_FEET = 2500.0;
     private static  final   int     MIN_BEDROOMS = 3;
     private static  final   double  MIN_BATHROOMS = 2.5;
-    
+    private static  final String type = "mansion";
+        
     //Class (Static) Variables
-    private static  String type = "mansion";
-    private static String  pictureGallery = "http://www.mansion.com/gallery/";
+    
     // instance variables - replace the example below with your own
     private int     year;
     private double  size;
@@ -23,6 +23,7 @@ public class House
     private int     numBedrooms;
     private double  numBathrooms;
     private boolean view;
+    private String  pictureGallery = "http://www.mansion.com/gallery/";
 
 
     /**

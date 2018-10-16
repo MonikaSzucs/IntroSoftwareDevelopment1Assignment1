@@ -7,12 +7,13 @@
  */
 public class House
 {
+    // static final variables
     private static  final   int     MIN_YEAR = 1850;
     private static  final   int     MAX_YEAR = 2018;
     private static  final   double  MIN_SQUARE_FEET = 2500.0;
     private static  final   int     MIN_BEDROOMS = 3;
     private static  final   double  MIN_BATHROOMS = 2.5;
-    private static  final String type = "mansion";
+    private static  final   String  type = "mansion";
         
     //Class (Static) Variables
     
@@ -63,7 +64,7 @@ public class House
     /**
      * Mutator
      * 
-     * @param year sets the value for the year
+     * @param theYear sets the value for the year
      */
     public void setYear(int theYear)
     {
@@ -92,7 +93,7 @@ public class House
     /**
      * Mutator
      * 
-     * @param size get the size of the house in square feet.
+     * @param theSize get the size of the house in square feet.
      */
     public void setSize(double theSize)
     {
@@ -139,7 +140,7 @@ public class House
     /**
      * Accessor
      * 
-     * @return the number of bedrooms.
+     * @return numBedrooms is returning the number of bedrooms.
      */
     public int getNumBedrooms()
     {
@@ -164,7 +165,7 @@ public class House
     /**
      * Accessor
      * 
-     * @return the number of bathrooms.
+     * @return numBathrooms returns the number of bathrooms.
      */
     public double getNumBathrooms()
     {
@@ -211,7 +212,7 @@ public class House
     /**
      * Accessor
      * 
-     * @return the view.
+     * @return pictureGallery returns a picture gallery.
      */
     public String getPictureGallery()
     {
@@ -221,7 +222,7 @@ public class House
     /**
      * Mutator
      * 
-     * @param pictureGallery checks to see if there is a link to a picture gallary for the house.
+     * @param thePictureGallery checks to see if there is a link to a picture gallary for the house.
      */
     public void setPictureGallery(String thePictureGallery)
     {
@@ -240,7 +241,10 @@ public class House
         }
     }
     
-    
+    /**
+     * 
+     * @return if the place has a view or not will return a specific string.
+     */
     public String getHouseDetails(){
         if(view){
             return("This mansion was built in " + getYear() + " with " + getSize() + " square feet of space, " + getNumBedrooms() + " bedrooms and " + getNumBathrooms() + " bathrooms. It has a spectacular view. You can see pictures of this house at " + getPictureGallery() + ".");

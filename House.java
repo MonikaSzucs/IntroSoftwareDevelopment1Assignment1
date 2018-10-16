@@ -157,7 +157,7 @@ public class House
             numBedrooms = theNumBedrooms;
         }
         else {
-            throw new IllegalArgumentException("Sorry, a mansion should have at least 3 bedrooms.");
+            throw new IllegalArgumentException("Sorry, a mansion should have at least " + MIN_BEDROOMS + " bedrooms.");
         }
     }
 
@@ -182,7 +182,7 @@ public class House
             numBathrooms = theNumBathrooms;
         }
         else {
-            throw new IllegalArgumentException("Sorry, a mansion should have at least 2.5 bathrooms.");
+            throw new IllegalArgumentException("Sorry, a mansion should have at least " + MIN_BATHROOMS + " bathrooms.");
         }
     }
     
